@@ -30,7 +30,6 @@ class EuclideanTest {
         pointD = new Point(new ArrayList<>(List.of(-12f, 0.5f, 3.2f)));
     }
 
-
     // Point A (10, 10.5)
     // Point B (3.3, 7.8)
     @Test
@@ -54,10 +53,8 @@ class EuclideanTest {
 
         // Decimal format helps to format my Float, this is because the test can fail due to
         // the number of decimals
-        DecimalFormat df = new DecimalFormat("#.0");
+        DecimalFormat df = new DecimalFormat("#.00");
 
-        Assertions.assertEquals("22.7", df.format(result));
+        Assertions.assertEquals("22.75", df.format(result));
     }
-
-
 }
